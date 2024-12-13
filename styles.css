@@ -1,0 +1,788 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+  
+
+/* Espaciado general entre secciones */
+section {
+  margin: 40px 0;
+  padding: 20px;
+}
+
+/* Espaciado personalizado por sección */
+#showcase {
+  margin-bottom: 20px;
+}
+
+#info-cards {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contacto {
+  margin-top: 60px;
+}
+
+/* Header superior con el logo centrado */
+header.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Altura del header superior */
+  background: #111; /* Color de fondo oscuro */
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+  align-items: center;
+  padding: 0 20px; /* Añade un poco de espaciado en los extremos */
+  z-index: 1100; /* Asegura que esté encima del resto */
+}
+
+header.top-header .logo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1; /* Asegura que el logo ocupe el espacio disponible */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  margin-left: auto; /* Asegura que la información del usuario se desplace a la derecha */
+}
+
+.user-info p {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #ffffff; /* Cambio de color a blanco para mejor contraste */
+  font-weight: bold;
+}
+
+.user-info a {
+  text-decoration: none;
+  color: #6c63ff;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover en los enlaces */
+.user-info a:hover {
+  background-color: #6c63ff;
+  color: white;
+}
+
+/* Estilo para el enlace de "Cerrar sesión" */
+.user-info a:active {
+  background-color: #5a54e3;
+}
+
+.user-info a:first-of-type {
+  font-weight: bold; /* Resalta el primer enlace de inicio de sesión */
+}
+
+/* Ajustar el main-header (segundo header) */
+header.main-header {
+  position: fixed;
+  top: 60px; /* Debajo del header superior */
+  left: 0;
+  width: 100%;
+  height: 50px; /* Ajustado para que se vea más proporcionado */
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Filtro de desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con navegadores Webkit */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras opcionales */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.main-header .nav-links {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  list-style: none;
+}
+
+.main-header .nav-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.main-header .nav-links a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Cambia el fondo al hacer scroll */
+header.scrolled {
+  background: #c0001a; /* Rojo más oscuro para un efecto elegante */
+}
+
+
+
+
+
+/* Showcase */
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.showcase video {
+  filter: brightness(0.7) contrast(1.1) saturate(1.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.text {
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text h2 {
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.text h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.text p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #c0001a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #c0001a;
+}
+
+/* Social Links */
+.social {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  z-index: 2;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .text h2 {
+    font-size: 2rem;
+  }
+
+  .text h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .social img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* Sección de cuadros */
+.service-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 50px 10%;
+  background-color: #f8f9fa;
+  
+}
+
+.service-boxes .box {
+  background: linear-gradient(135deg, #ffffff, #f7f8fa);
+  text-align: center;
+  background: #ececec;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-boxes .box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.service-boxes .box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color:#111 ;
+}
+
+.service-boxes .box p {
+  font-size: 0.9rem;
+  color :#111;
+  line-height: 1.5;
+}
+
+
+.service-boxes .box:hover {
+  color: #111;
+  background: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-boxes .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-boxes .box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(230, 0, 0, 0.2);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.service-boxes .box:hover::before {
+  transform: rotate(0);
+}
+
+
+
+
+footer {
+  background: #000; /* Fondo negro */
+  color: #fff;
+}
+.btn-secondary
+{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #c0001a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #b40119;
+}
+
+/* Sección Hero (introducción) */
+.hero_2 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('mechanic-hand-checking-fixing-broken-car-car-service-garage\ \(1\).jpg') no-repeat center center/cover;
+  background: url('mechanic-hand-checking-fixing-broken-car-car-service-garage\ \(1\).jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+  box-shadow: rgba(0, 0, 0, 10);
+}
+
+.hero_2 h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero_2 p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Sección Nosotros */
+.nosotros {
+  display: flex; /* Utilizamos flexbox para organizar los elementos en la sección */
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: space-between; /* Distribuye el espacio entre la imagen y los contenedores de texto */
+  padding: 20px; /* Añade espacio alrededor de la sección */
+  background-color: #111;
+  margin-top: 60px;
+color: #ececec;
+  margin: 10px;
+}
+
+
+
+/* Imagen */
+.imagen {
+  width: 400px;  /* Ancho fijo de 200px */
+  height: 400px;  /* Altura fija de 200px */
+  object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsión */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Estilos de los encabezados */
+.nosotros h2 {
+  font-size: 24px; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio debajo del encabezado */
+  margin: 30px;
+}
+
+/* Estilo de los párrafos */
+.nosotros p {
+  font-size: 16px; /* Tamaño de la fuente */
+  line-height: 1.5; /* Espaciado entre líneas */
+  margin-bottom: 15px; /* Espacio debajo de cada párrafo */
+  margin: 30px;
+}
+
+
+
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #c0001a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  margin: 30px;
+}
+
+.btn-primary:hover {
+  background: #b40119;
+}
+
+/* Sección Contacto */
+.contacto {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #111;
+  font-weight: 700;
+}
+
+.contacto p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos para el botón secundario */
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #c0001a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #c0001a;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .hero_2 h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero_2 p {
+    font-size: 1.2rem;
+  }
+
+  .nosotros h2, .servicios h2, .contacto h2 {
+    font-size: 2rem;
+  }
+
+  .nosotros p, .servicios p, .contacto p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+  }
+
+  .btn-secondary {
+    padding: 8px 16px;
+  }
+}
+
+
+/* Service Cards Section */
+.roles {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+ 
+}
+
+.roles h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #111;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px;
+  justify-items: center; /* Centra las tarjetas en cada celda */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0 10px; /* Añade un pequeño margen interno para las tarjetas */
+ 
+}
+
+
+
+/* Media query para pantallas medianas */
+@media (max-width: 768px) {
+  .role-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en pantallas medianas */
+  }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+  .role-cards {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila en pantallas más pequeñas */
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #c0001a;
+  margin-bottom: 15px;
+}
+
+.card p1 {
+  color: #111;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+
+}
+
+.btn-secondary {
+  background-color: #c0001a;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  
+}
+
+.btn-secondary:hover {
+  background-color: #a60017;
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .roles h2 {
+    font-size: 1.8rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Ajustes para la sección de los cuadros */
+.info-cards {
+  display: flex;
+  
+  justify-content: space-evenly; /* Espacio equitativo entre los cuadros */
+  align-items: stretch; /* Hace que los cuadros ocupen la misma altura */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  padding: 0; /* Elimina el padding alrededor de los cuadros */
+  margin: 0; /* Elimina el margin */
+}
+
+.card {
+  flex: 1; /* Cada tarjeta ocupa el mismo espacio */
+  margin: 0; /* Elimina el margin entre las tarjetas */
+  padding: 20px;
+  text-align: justify;
+  border-radius: 0px;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.card-blue:hover
+{
+  background-color: #c0001a;
+}
+
+.card-black:hover
+{
+  background-color: #c0001a;
+}
+
+.card-green:hover
+{
+  background-color: #c0001a;
+}
+
+
+/* Colores personalizados */
+.card-blue {
+  background-color: #111;
+
+}
+
+
+
+.card-black {
+  background-color: #111; /* Negro */
+}
+
+.card-green {
+  background-color: #111; /* Verde */
+}
+
+/* Títulos y texto descriptivo */
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ececec;
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.test {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+  /* Estilo para las imágenes */
+  .carousel-image {
+    width: 200px;  /* Ancho fijo de 200px */
+    height: 200px;  /* Altura fija de 200px */
+    object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsión */
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.btn-w {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00aa08;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-w:hover {
+  background: #176100;
+}
+
+

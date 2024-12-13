@@ -1,0 +1,67 @@
+.crear-cuenta-form {
+  margin-top: 100px; 
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.crear-cuenta-form h2 {
+  text-align: center;
+  margin-bottom: 15px; 
+}
+
+.crear-cuenta-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.crear-cuenta-form input,
+.crear-cuenta-form textarea {
+  width: 100%;
+  padding: 8px; 
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.crear-cuenta-form button {
+  display: block;
+  width: 100%;
+  background-color: #c0001a;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 14px; 
+  cursor: pointer;
+}
+
+.crear-cuenta-form button:hover {
+  background-color: #b40119;
+}
+
+.crear-cuenta-form .error {
+  color: #ff0000;
+  background-color: #ffe6e6;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ffcccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.crear-cuenta-form .success {
+  color: #008000;
+  background-color: #e6ffe6;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #b3ffb3;
+  border-radius: 5px;
+  text-align: center;
+}

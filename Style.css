@@ -1,0 +1,333 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-top: 80px; /* Altura total de los headers */
+
+}
+
+
+
+/* Encabezado */
+header.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+header.top-header .logo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Ajustar el main-header (segundo header) */
+header.main-header {
+  position: fixed;
+  top: 60px; /* Debajo del header superior */
+  left: 0;
+  width: 100%;
+  height: 25px; /* Ajustado para que se vea más proporcionado */
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Filtro de desenfoque */
+  -webkit-backdrop-filter: blur(
+    10px
+  ); /* Compatibilidad con navegadores Webkit */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras opcionales */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.main-header .nav-links {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  list-style: none;
+}
+
+.main-header .nav-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.main-header .nav-links a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Cambia el fondo al hacer scroll */
+header.scrolled {
+  background: #c0001a; /* Rojo más oscuro para un efecto elegante */
+}
+
+/* Formulario de creación de cuenta */
+h2 {
+  text-align: center;
+  margin-top: 80px; /* Para evitar que se oculte debajo del header */
+  color: #111;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 100%;
+  margin: 30px auto 0; /* Centrado y espacio superior */
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #111;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #c0001a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #b40119;
+}
+
+/* Mensajes de error y éxito */
+.error {
+  color: red;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Enlace de inicio de sesión */
+p {
+  text-align: center;
+}
+
+a {
+  color: #c0001a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Estilo para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las celdas de la tabla */
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+/* Estilo para las cabeceras de la tabla */
+th {
+  background-color: #c0001a;
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Estilo para las filas de la tabla */
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Estilo alterno para las filas */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para el hover de las filas */
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Estilo para títulos */
+h2 {
+  color: #c0001a;
+}
+        /* Estilo para el menú lateral */
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            margin-left: 200px;
+            padding: 20px;
+            width: calc(100% - 200px);
+        }
+
+        .message {
+            color: green;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #111;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+        #formVehiculo {
+            margin-top: 20px;
+        }
+
+        #formVehiculo input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+#citas table {
+    width: 100%;
+    margin: 50px 0;
+    border-collapse: collapse;
+}
+
+#citas th, #citas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#citas th {
+    background-color: #111;
+}
+
+
+ .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+
+form {
+  position: relative;
+  padding: 20px;
+}

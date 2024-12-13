@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-top: 80px; /* Altura total de los headers */
+}
+
+/* Header superior con el logo centrado */
+header.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Altura del header superior */
+  background: #111; /* Color de fondo oscuro */
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+  align-items: center;
+  padding: 0 20px; /* Añade un poco de espaciado en los extremos */
+  z-index: 1100; /* Asegura que esté encima del resto */
+}
+
+header.top-header .logo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1; /* Asegura que el logo ocupe el espacio disponible */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  margin-left: auto; /* Asegura que la información del usuario se desplace a la derecha */
+}
+
+.user-info p {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #ffffff; /* Cambio de color a blanco para mejor contraste */
+  font-weight: bold;
+}
+
+.user-info a {
+  text-decoration: none;
+  color: #6c63ff;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover en los enlaces */
+.user-info a:hover {
+  background-color: #6c63ff;
+  color: white;
+}
+
+/* Estilo para el enlace de "Cerrar sesión" */
+.user-info a:active {
+  background-color: #5a54e3;
+}
+
+.user-info a:first-of-type {
+  font-weight: bold; /* Resalta el primer enlace de inicio de sesión */
+}
+
+/* Ajustar el main-header (segundo header) */
+header.main-header {
+  position: fixed;
+  top: 60px; /* Debajo del header superior */
+  left: 0;
+  width: 100%;
+  height: 25px; /* Ajustado para que se vea más proporcionado */
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Filtro de desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con navegadores Webkit */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras opcionales */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.main-header .nav-links {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  list-style: none;
+}
+
+.main-header .nav-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.main-header .nav-links a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Cambia el fondo al hacer scroll */
+header.scrolled {
+  background: #c0001a; /* Rojo más oscuro para un efecto elegante */
+}
+
+/* Formulario de creación de cuenta */
+h2 {
+  text-align: center;
+  margin-top: 80px; /* Para evitar que se oculte debajo del header */
+  color: #111;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 100%;
+  margin: 30px auto 0; /* Centrado y espacio superior */
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #111;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #c0001a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #b40119;
+}
+
+/* Mensajes de error y éxito */
+.error {
+  color: red;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Enlace de inicio de sesión */
+p {
+  text-align: center;
+}
+
+a {
+  color: #c0001a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
